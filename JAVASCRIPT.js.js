@@ -294,11 +294,11 @@ Arrays And its methods  :-
 2) Join Array --->// It  change to string 
 
 ------Actual Array me se ------
-3)pop --> remove last element from actual array 
-4)push --> add element in the last 
-5) shift ---> remove first element from actual array ---> 
+3)pop --> remove last element from actual array --> last wale ko kha jaayega 
+4)push --> add element in the last --->last me seat lekr aa jaayega 
+5) shift ---> remove first element from actual array ---> pehle ko hata kr khud baith jaayega
 6) unshift --> add element at first position ---> and then give new array length ---> khiskega fir ye
-
+//apni seat lekr aayega or add kr lega
 
 7)delete --> ye element remove krega pr uski space khali nhi krega ,us jagah ko occupy rkhega ,to length utni hee rhegi. ---par ye method nahi hai ...ye operator kehlata hai .
 8)concat  --> 
@@ -381,9 +381,19 @@ let newArray = num.concat(num2);
 console.log("New Array ", newArray);//New Array  [1, 2, 3,  4, 5, 6,7, 8, 9, 10, 2, 3,4]
 
 //Splice ---> 
-
+num=[1, 2, 3, 4, 5, 6, 7, 8, 9,10]
 num.splice(2,3,1024,1025,8989,45454);
 console.log(num);//[2,3,1024,1025, 8989, 45454,6,7,8,9,10]
+
+array.splice(start, deleteCount, item1, item2, ...);
+It will delete 3 elements 
+start index is 2 -->
+index starts from 0
+
+so 2 index is 3 and it will delete 3 items i.e 3,4,5
+and it will insert 1024,1025,8989,45454
+baki ke as it is 
+
 
 //it return deleted values of arrays ---> which we have deleted ---> It starts deleting from index 2 and 3 number will be deleted and 4 number will be added i.e. 1024,1025,8989,45454
 
@@ -2219,7 +2229,7 @@ hello123();
 *************************************
 //Express JS to create backend server 
 *************************************
-`********************
+********************
 
 Install express:- 
 

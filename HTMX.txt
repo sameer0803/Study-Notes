@@ -1,0 +1,32 @@
+CRUD------
+create  --post
+read --get
+update --put
+delete --delete
+
+
+1)Hello World --> hx-post,hx-get,hx-target
+2) hx-trigger --> mouseenter,mouseleave,click
+3)triggers modifier :_ hx-trigger: mouseneter once ,delay:3s
+ <div hx-post="http://localhost:1330/messages" hx-trigger="click from:#requestTrigget">Make DELAYED Request</div> 
+
+     <button type="button" id="requestTrigget">Submit</button>
+4)Trigger Filters:- conditions ko add krna :- click[2 +3 ==4]s
+5) Using Special Events:- revealed,intersect threshold:0.7
+6) Polling content :-
+7) Adding Progress Indicators:- 
+
+8)Sending data in requests
+9)Using Confirm Dialog Box
+10) Uploading files 
+11)Handling Race conditions 
+
+Saturday :- 
+20
+30
+20
+20
+
+Sunday:-
+project :- 2 project
+

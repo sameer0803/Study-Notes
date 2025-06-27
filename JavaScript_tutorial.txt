@@ -1,7 +1,7 @@
-Java Script :- 
+Java Script :-) 
 
 extension --> .js
-ECMA script :- ES6----> 6th Version aaya tha tab 
+ECMA script(1994) :- ES6----> 6th Version aaya tha tab JS(1997)
 
 //****************************
 //Variables :- 
@@ -23,8 +23,6 @@ console.log(e);
 ****************************
 Types of datatypes:- 
 ****************************
-
-
 
 Primitive Data type :- 
 Null,Number,Symbol ,String boolean , bigInt,undefined
@@ -49,6 +47,7 @@ console.log(typeof d);
 
 
 //Non-Primitive data types 
+object={x:y} //Object
 
 const item = {
   "Sameer": true,
@@ -122,7 +121,7 @@ Functions:-
 
 Syntax:- 
 
-function functiokaName (parameter if any)
+function functionKaName (parameter if any)
 {
 	return //logic
 }
@@ -141,9 +140,9 @@ let a = 1;
 let b = 2;
 let c = 3;
 
-console.log("One plus average of a and b", onePlusAvg(a,b)) ;
-console.log("One plus average of b and c", onePlusAvg(b,c));
-console.log("One plus average of a and c", onePlusAvg(c,a));
+console.log("One plus average of a and b", onePlusAvg(a,b)) ;//2.5
+console.log("One plus average of b and c", onePlusAvg(b,c));//3.5
+console.log("One plus average of a and c", onePlusAvg(c,a));//3
 
 *************************
 //Arrow Function
@@ -202,8 +201,8 @@ let name1 ="Sameer";
 let name2 ='Arsalan';
 // let num=name.length;
 
-console.log(name2);
-console.log(name2[0]);
+console.log(name2); //Arsalan
+console.log(name2[0]); //A
 
 //TEMPLATE lITERALS
 
@@ -218,14 +217,12 @@ console.log(sentence);
 /t
 //Escape Sequence characters :-
 let fruit = 'Bana\tna'
-console.log(fruit)
-console.log(fruit.length);
-
+console.log(fruit) //Bana	na
+console.log(fruit.length); //7
 
 ****************************
 Methods of String :- 
 ****************************
-
 1)Uppercase
 2)Lowercase
 3)Length
@@ -236,17 +233,17 @@ Methods of String :-
 
 name = "Sameer"
 name1="Sameer1"
-console.log(name.toUpperCase());
-console.log(name.toLowerCase());
-console.log(name.length());
-console.log(name.slice(3,5));
-console.log(name.slice(3));
-console.log(name.replace("am","pm"));
+console.log(name.toUpperCase()); //SAMEER
+console.log(name.toLowerCase());//sameer
+console.log(name.length());//6
+console.log(name.slice(3,5));//ee
+console.log(name.slice(3));//eer
+console.log(name.replace("ee","aa"));
 console.log(name.concat(" is a ulta pulta name of ",name1," Ok"));
 console.log(name2.trim().length);//faltu ka space hta dega //Whitespace
 console.log(name1.trim());
 
-//String is immutable ---> We cannot change 
+//String is immutable ---> We cannot change only we can apply functions on it 
 
 -------------------------------------------------------------------------------
 ****************************
@@ -257,15 +254,13 @@ Xtra:-
 example :- sentence.includes(word);
 2)
 Number.parseInt(string); //change datatype to number 
-
-
 -------------------------------------------------------------------------------
 **************************** 
 Arrays:-
 **************************** 
-storing many values in a single element is called Arrays .
+Storing many values in a single element is called Arrays .
 let name =[12,45,169,45,"Not present"]
-Agr usko direct print kr lain to kya output dega ??
+Agr usko direct print kr lain to kya output dega ??//yes
 
 let arr1 = [2,3,4,4,4,]
 console.log(arr1)
@@ -279,36 +274,37 @@ console.log(arr1)
  //   4: 4
  // length: 5[[Prototype]]: Array(0)
 
-name[0];---> 12
-name.length---> 6
+name[0];---> //12
+name.length---> //5
 Same like String but is a mutable in nature ---> value can be change, also its type is of object .
 
  //Changing value 
  name[4]=45
  //Adding new value 
- name[6]=4545;
+ name[5]=4545;
  
 type -->object 
+typeof name ---> //object
 
 **************************** 
 Arrays And its methods  :-
 **************************** 
 
-1)Arrys to string convert ---> change to string 
-2) Join Array ---> change to string 
+1)Arrys to string convert --->//It change to string 
+2) Join Array --->// It  change to string 
 
 ------Actual Array me se ------
-3)pop --> remove last element from actual array 
-4)push --> add element in the last 
-5) shift ---> remove first element from actual array
-6) unshift --> add element at first position ---> and then give new array length
-
+3)pop --> remove last element from actual array --> last wale ko kha jaayega 
+4)push --> add element in the last --->last me seat lekr aa jaayega 
+5) shift ---> remove first element from actual array ---> pehle ko hata kr khud baith jaayega
+6) unshift --> add element at first position ---> and then give new array length ---> khiskega fir ye
+//apni seat lekr aayega or add kr lega
 
 7)delete --> ye element remove krega pr uski space khali nhi krega ,us jagah ko occupy rkhega ,to length utni hee rhegi. ---par ye method nahi hai ...ye operator kehlata hai .
 8)concat  --> 
-9)sort --> alphabetically krta hai ----> one ,two three ko  atring consider krke pura sort kr dega.
+9)sort --> alphabetically krta hai ----> one ,two three ko  string consider krke pura sort kr dega.
 
-lekin agar number wise hee krna hai to hame comapre function use krna padega 
+lekin agar number wise hee krna hai to hame compare function use krna padega 
 //Ascending order me krne ke liye 
 
 let compare(a,b)
@@ -322,8 +318,7 @@ num.sort(compare);
 11)splice---> it delete and add at the same time by giving the particular number.
 12)slice --> same to same as that of string .
 
-
-original array ko change krne wale log :-
+original array me hee change krne wale log :-Same Array ko hee badal dete hain
 pop
 push
 shift
@@ -331,7 +326,6 @@ unshift
 delete
 sort
 reverse
-
 
 new array create krne wale log:- 
 
@@ -345,52 +339,71 @@ splice
 Examples:
 **************************** 
 
-console.log(num.length);
-let b = num.toString();
-console.log(typeof num);
-console.log(typeof b);
+let num = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+console.log(num); //let num = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+console.log(typeof num); //object
+let b = num.toString(); 
+console.log(b); //1,2,3,4,5,6,7,8,9,10
+console.log(typeof b);//string
 
-//Join 
 let c = num.join("_");
-console.log(c);
-console.log(typeof c);
+console.log(c);//1_2_3_4_5_6_7_8_9_10
+console.log("type of c", typeof c);//string
+console.log(typeof num); //object
 
 
-//pop and push 
-num.pop();
+//pop 
+g= num.pop(); --> //last element ko hata deta hai 
+console.log(g); //10
+console.log(num) //[1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+// push 
 num.push(56);
-r = num.push(83);
+l = num.push(83);
+console.log("Num print ", num);//[1, 2, 3, 4, 5, 6, 7, 8, 9,10,56]
+console.log("r print ",l); //return type is number of length
 
-console.log("Num print ",num);
-console.log("r print ",r); //return type is number of length
+//Shift ---> delete maan lo first element --> or sari jagah khiska dega ---> sare ke sare jama lekr {aage} chale
 
-//delete
+d= num.shift();
+console.log("Num print ", num);//[2, 3, 4, 5, 6, 7, 8, 9]
+console.log("d print ", d);//1
+
+
+//delete ---> delete hoga and uski jagah empty aa jaaygi 
 let r =delete num[0];
-console.log("Num print ",num);
-console.log("r print ",r);
-
-console.log("r print ",r);
-let num2 = [2, 3, 4]
+console.log("Num print ",num);//Num print  [ <1 empty item>, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]
+console.log("r print ",r);//r print  true
 
 //Concat
+let num2 = [2, 3, 4]
 let newArray = num.concat(num2);
-console.log("Num print ", num);
-console.log("Num2 print ", num2);
-console.log("New Array ", newArray);
+console.log("New Array ", newArray);//New Array  [1, 2, 3,  4, 5, 6,7, 8, 9, 10, 2, 3,4]
 
-//Splice ---> it return deleted values of arrays ---> which we have deleted ---> It starts deleting from index 2 and 3 number will be deleted and 4 number 
-will be added i.e. 1024,1025,8989,45454
-
+//Splice ---> 
+num=[1, 2, 3, 4, 5, 6, 7, 8, 9,10]
 num.splice(2,3,1024,1025,8989,45454);
-console.log(num);
+console.log(num);//[2,3,1024,1025, 8989, 45454,6,7,8,9,10]
+
+array.splice(start, deleteCount, item1, item2, ...);
+It will delete 3 elements 
+start index is 2 -->
+index starts from 0
+
+so 2 index is 3 and it will delete 3 items i.e 3,4,5
+and it will insert 1024,1025,8989,45454
+baki ke as it is 
+
+
+//it return deleted values of arrays ---> which we have deleted ---> It starts deleting from index 2 and 3 number will be deleted and 4 number will be added i.e. 1024,1025,8989,45454
 
 
 //Slice
-r = num.slice(2, 5)
+r = num.slice(2, 5) ---> Starts from 2nd position and will not take 5th position
 s=num.slice(2);
-console.log(num);
-console.log(r);
-console.log(s);
+
+console.log(r);[ 3, 4, 5 ]
+console.log(s);[3, 4, 5,  6,7, 8, 9, 10]
  
 -------------------------------------------------------------------------------
 
@@ -422,7 +435,7 @@ console.log(s);
  inshort kisi bhi object se array. 
  
  let name ="Sameer"
- let array= Array.from(name);
+ let namearray= Array.from(name);
  
 3)For of loop ---> it is a shortcut of (OLd for loop) ----> values print krta hai .....
 
@@ -436,9 +449,7 @@ console.log(num[i]);
 for(let item in num)
 {
 console.log(num[i]);
-
 }
- 
 -------------------------------------------------------------------------------
  **************************** 
  Map,Filter,Reduce:-
@@ -449,39 +460,31 @@ console.log(num[i]);
  filter --->all operations can be perform on key ,value and array ---> It will return new array---> make new array  
  Operations like comapre operators  generally performed here
  reduce ---> It does not make array ---> it takes previous value of array and then perform operations on it.
- 
 **************************** 
 Xtra 2 :- 
 **************************** 
- 
 Difference between Map and foreach loop
  foreach---> it will not return new array ,only operations can be performed on it .
- map ---> all operations can be perfoem on key ,value and array ---> It will return new array---> make new array  
+ map ---> all operations can be perform on key ,value and array ---> It will return new array---> make new array  
  for above both(value,index,array)
  
 The Difference between map and filter method
 is that – ⁣map transforms each element of an array based on a transformation function and returns a new array of the same length,
 While, filter creates a new array with only the elements that satisfy a specified condition.
 Both methods return a new array and do not modify the original array.
- 
- 
 **************************** 
 Example:-
 **************************** 
  //Map and for each:- 
- 
  let num = [1, 2, 3, 4];
-// num.map((num) => {
-//   console.log(num * num);
+// num.map((num_) => {
+//   console.log(num_ * num_);
 // })
 // console.log(newArray)
-
 let num1 = [1, 2, 3, 4];
 let newArray = num1.map((num,key,array) => {
-  
   return delete array[2];
 })
-
  console.log("Printing NewArray",newArray)
 // num.forEach((value, key, array) => {
 //   console.log("done");
@@ -594,7 +597,7 @@ DOM :- pure HTML page ka ek javascript object bana diya gaya hai ---> uska naam 
 console.log(window);
 console.log(window.document); ---> shortcut --->console.log(document) ---> iske andar HTML ki sari chize aa jaayngi.
 document.body.style.background ---> Dynamically change krna hai jab hame . User ke kisi action par ham change krna ho.
-
+console.log(window.document.body.style.background="pink");
 **************************** 
 BOM :- Browser object model
 **************************** 
@@ -602,7 +605,7 @@ additional object provided by browser. (Host environment)
 redirect krna ---->
 Alert ,confirm ,prompt  .
 
-location.href(www.google.com)
+location.href ---> It will work directly 
 --------------------------------------------------------------------------------
 Practise 
 
@@ -779,7 +782,7 @@ div ---> container ---> code from bootstrap website .---> links bhi copy krna pa
 
 from html
 body---> container---table
-t= document.body.firstElementChild.firstElementChild ----> bosy ke first elemnt child se first element child nikaal liya hai .
+t= document.body.firstElementChild.firstElementChild ----> body ke first elemnt child se first element child nikaal liya hai .
 
 t---> t ke andar table aa  jaayega
 
@@ -847,6 +850,21 @@ inner HTML and outer HTML
 innerHTML ---> 
 outerHTML ---> 
 
+Code :-
+
+
+let a = document.getElementsByTagName('div')[0];
+// console.log(a);
+// a.innerHTML = a.innerHTML + '<h1> Hello World</h1>';
+// console.log("inner HTML", a);
+
+let div = document.createElement('div');
+div.innerHTML = '<h1> Hello World</h1>';
+// a.after(div);
+a.replaceWith(div);
+
+console.log("after append", a);
+
 
 --------------------------------------------------------------------------------
 HTML attribute types :-
@@ -902,20 +920,7 @@ node.before()----> Insert before node
 node.after() ---> Insert after node
 node.replaceWith() ---> replace node with the given node
 
-Code :-
 
-
-let a = document.getElementsByTagName('div')[0];
-// console.log(a);
-// a.innerHTML = a.innerHTML + '<h1> Hello World</h1>';
-// console.log("inner HTML", a);
-
-let div = document.createElement('div');
-div.innerHTML = '<h1> Hello World</h1>';
-// a.after(div);
-a.replaceWith(div);
-
-console.log("after append", a);
 
 
 --------------------------------------------------------------------------------
@@ -923,17 +928,22 @@ console.log("after append", a);
 insert adjacent HTML/Text/Element,
 ***************************
 
-innerAdjacentHTML
-innerAdjacentElement
-innerAdjacentText
+1)The insertAdjacentHTML()----> method inserts HTML code into a specified position.
 
+
+2)innerAdjacentElement
 
 beforebegin:-
 afterbegin:-
 beforeend:-
 afterend:-
-
 remove:-
+
+
+3)innerAdjacentText----> method inserts only text code into a specified position.
+
+
+
 
 // first.insertAdjacentHTML('beforebegin','<div id="test"> beforeBegin Testing </div>')
 // first.insertAdjacentHTML('beforeend','<div id="test"> beforeEnd Testing </div>')
@@ -942,15 +952,10 @@ remove:-
 // first.insertAdjacentHTML('afterend','<div id="test"> afterEnd Testing </div>')
 
 // first.remove();
-
-
-
-
 --------------------------------------------------------------------------------
 ***************************
 class name and class list.
 ***************************
-
 
 className:-
 
@@ -987,7 +992,7 @@ Variable SetTimeoutName( functionkaName(){
 let a = setTimeout(function(){
 alert("I am inside of setTimeOut function");
   
-},5000);
+},);5000
 let b =prompt( "Do you want to run the setTimeOut function?");
 
 if("n"==b){
@@ -1000,18 +1005,80 @@ console.log(a);
 --------------------------------------------------------------------------------
 Browser Events: DOM events========>>>FOUR TYPES<<<========
 
-Mouse Events :- click,contextMenu(right click),mouse over/mouse-out, mousedown,mouseup,mousemove
+Mouse Events :- onclick,contextMenu(right click),onmouseover/mouse-out, mousedown,mouseup,mousemove
 Keyboard Events:- keydown and key up.
 Form element Events :- Submit,focus
 Document Events :- DOM content loaded.
-
-
-
 Handling Events :-
-addEventListener
+
+addEventListener:-
+------------------------------------------------------------------
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>The Document Object</h1>
+<h2>The addEventListener() Method</h2>
+
+<p>How to pass parameter values with the 
+addEventListener() method.</p>
+
+<p>Click anywhere in the document to perform a calculation.</p>
+
+<p id="demo"></p>
+
+<script>
+let p1 = 5;
+let p2 = 7;
+
+document.addEventListener("click", function() {
+  myFunction(p1, p2);
+});
+
+function myFunction(a, b) {
+  let result = a * b;
+  document.getElementById("demo").innerHTML = result;
+}
+</script>
+
+</body>
+------------------------------------------------------------------
+
+
+
 removeEventListener
 
+<!DOCTYPE html>
+<html>
+<body>
 
+<h1>The Document Object</h1>
+<h2>The removeEventListener() Method</h2>
+
+<p>A mousemove event handler displays a random number every time you move your mouse in this document.</p>
+
+<p>Click "Remove" to remove the event handler.</p>
+
+<button onclick="removeHandler()">Remove</button>
+
+<p id="demo"></p>
+
+<script>
+document.addEventListener("mousemove", myFunction);
+
+function myFunction() {
+  document.getElementById("demo").innerHTML = Math.random();
+}
+
+function removeHandler() {
+  document.removeEventListener("mousemove", myFunction);
+}
+</script>
+
+</body>
+</html>
 
 
 target :-
@@ -1022,6 +1089,8 @@ target :-
 ********************************************
 call backs, call back hell,Pyramid of doom 
 ********************************************
+
+A callback is a function passed as an argument to another function.
 
 function to make asynchronous ---> So we pass function inside the setTime out and make it as asynchronous
 
@@ -1053,6 +1122,41 @@ api.createOrder(cart ,function() {
 })) 
 })) 
 } 
+---------------------------------------------------------------
+
+<!DOCTYPE html>
+<html>
+<body style="text-align: right">
+
+<h1>JavaScript Functions</h1>
+<h2>Callback Functions</h2>
+<p id="demo"></p>
+
+<script>
+// Create an Array
+const myNumbers = [4, 1, -20, -7, 5, 9, -6];
+
+// Call removeNeg with a Callback
+const posNumbers = removeNeg(myNumbers, (x) => x >= 0);
+
+// Display Result
+document.getElementById("demo").innerHTML = posNumbers;
+
+// Remove negative numbers
+function removeNeg(numbers, callback) {
+  const myArray = [];
+  for (const x of numbers) {
+    if (callback(x)) {
+      myArray.push(x);
+    }
+  }
+  return myArray;
+}
+</script>
+
+</body>
+</html>
+-----------------------
 
 Function ke andar functions aaye jaa rha hain ---> Pyramid of Doom. ---> Ise hee call back hell bolte hain 
 
@@ -1173,9 +1277,27 @@ createOrder(cart)
 
 
 
-methods of promises, 
-attaching handlers promise api ,ascynch await 
-attaching handlers,ascynch await 
+***************************
+methods of promises  :-
+***************************
+
+ 
+
+
+***************************
+ascynch await  :-
+***************************
+
+
+
+
+***************************
+attaching handlers :-
+***************************
+
+
+
+
 ----------------------------------------------------------------
 ***************************
 Promise API :-
@@ -1309,7 +1431,7 @@ client ko identify krne ke liye ko kon hame request bhej rha hai .
  1)To see all cookies ---->
 document.cookie
  2)To add  cookies ---->
-document.cookie =+=uddin
+document.cookie =sameer=uddin
 3)To update cookie 
 document.cookie = "username=John Doe";
 
@@ -1319,7 +1441,7 @@ here sameer is key and uddin is value
 For semilcon key or value we use encodeURIComponent
 
 let key = prompt("Enter your key")
-let value = prompt("Enter your Value")
+let value = prompt("Enter your value")
 document.cookie = `${encodeURIComponent(key)}=${encodeURIComponent(value)}`
 console.log(document.cookie);
 document.cookie = ""
@@ -1335,7 +1457,7 @@ ___________________________________________________________________________
 
 ***************************** 
 Local Storage:-
-*****************************  
+***************************** 
 
 It is a web storage object which are not sent to server with each request.
 which will not go on refresh or on new request .
@@ -1350,8 +1472,6 @@ removeItem(key)
 clear()
 key(indexes) ---> get the key on the index . like 0,1,2,3,4 etc
 length() ---> length of all th elocal storage present on that server 
-
-
 
 key and value dono string me save hota hai 
 ____________________________________________________________________________
@@ -1392,6 +1512,7 @@ Polymorphism
 Abstraction
 Encapsulation
 ____________________________________________________________________________
+
 
 ***************************** 
 Prototypes :- 
@@ -1726,10 +1847,10 @@ const {name,age,city} = {
 console.log(name)
 
 ***********************
-Spread Operator Syntax:- 
+Spread Operator Syntax:- Arrays to Object conversion:- 
 ***********************
 
-Arrays to Object conversion:- 
+
 
 let arr1 = [2,3,4,4,4,]
 let obj1 = {...arr1}
@@ -2039,8 +2160,8 @@ Main file me ---> const function1= require ("./path of file  or file Name") ----
 b)  Multiple function ke liye :- 
 use bas export krna hoga --> module.exports (function1,function2)
 Main file me ---> const (function1_new = require ("./path of file  or file Name") --------> function1 object hoga
-function_new.function1();
-function_new.function2();
+function1_new.function1();
+function1_new.function2();
 
 We can use destructuring here ...
 use bas export krna hoga --> module.exports (function1,function2)
@@ -2108,6 +2229,7 @@ hello123();
 *************************************
 //Express JS to create backend server 
 *************************************
+`********************
 
 Install express:- 
 
@@ -2125,7 +2247,7 @@ app.get('/', (req, res) => {
 app.get('/about', (req, res) => {
   res.send('about')
 })
-
+=
 app.get('/contact', (req, res) => {
   res.send('contact')
 })
@@ -2179,7 +2301,6 @@ app.listen(port, () => {
   console.log(`Example app listening on port  https://localhost:${port}`)
 })
 ------------------------------------
-
 Using express.js for backend 
 so install express js 
 
@@ -2232,3 +2353,9 @@ npm install --save pdf-merger-js
 and copy file of node for js 
 
 
+.
+.
+.
+
+
+Install runner extension in vs code ---> Go to setting --> search runner ---> and then tick run in terminal.

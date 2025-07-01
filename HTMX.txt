@@ -1,0 +1,168 @@
+npx http-server ./chapter2
+
+npm start server 
+
+$  npm start server.js
+
+> htmx-project@1.0.0 start
+> node server.js server.js
+
+CRUD------
+create  --post
+read --get
+update --put
+delete --delete
+
+
+1)Hello World --> hx-post,hx-get,hx-target
+2) hx-trigger --> mouseenter,mouseleave,click
+3)triggers modifier :_ hx-trigger: mouseenter once ,delay:3s
+ <div hx-post="http://localhost:1330/messages" hx-trigger="click from:#requestTrigget">Make DELAYED Request</div> 
+
+     <button type="button" id="requestTrigget">Submit</button>
+4)Trigger Filters:- conditions ko add krna :- click[2 +3 ==4]s
+5) Using Special Events:- revealed,intersect threshold:0.7
+6) Polling content :-hx-trigger: mouseenter 5s
+<div hx-get="http://localhost:1330/"
+      hx-target="#response"
+      hx-trigger="every 5s"
+      hx-swap="beforeend"
+	  //It Will append(add-on hoti jaayengi).
+7) Adding Progress Indicators:- 
+
+       <div hx-post="http://localhost:1330/messages"
+      >
+
+      Click Me and See Indicator
+
+      <p class="htmx-indicator">Loading Content...</p>
+      </div> 
+
+8)Sending data in requests:-
+1) form ke through :-
+<!-- <form action="submitttt">
+      <input type="email" name="email" placeholder="Enter your name" />
+      <input type="password" name="pass" placeholder="Enter your email" />
+
+      <button
+        type="button"
+        id="submitttt"
+        hx-post="http://localhost:1330/echopayload"
+        hx-target="#response"
+      >
+        Submit
+      </button>
+    </form> -->
+
+
+
+2) Json data:- 
+//Hard Coding
+ <button
+      type="button"
+      hx-post="http://localhost:1330/echopayload"
+      hx-target="#response"
+      hx-vals='{
+          "email":  "sameer.uddin@gmail.com",
+          "pass": "sameer123"}'
+    >
+      Submit
+    </button>
+    </button>
+	
+	From JS functions 
+	
+	getPassword =() => {
+      return "sameer123";
+    };
+    function getEmail(){
+      return "sameer123@gmail.com";
+    };
+    </script>
+	
+	<button
+      type="button"
+      hx-post="http://localhost:1330/echopayload"
+      hx-target="#response"
+      hx-vals='js:{
+          "email":  getEmail(),
+          "pass": getPassword()}'
+    >
+      Submit
+    </button>
+	
+3)     <button
+
+      hx-post="http://localhost:1330/echopayload"
+      hx-target="#response"
+      hx-include="#myID"
+     
+    >
+      Submit
+    </button>
+
+    <input type="text" id="myID" name="email" > 
+
+9)Using Confirm Dialog Box :-
+hx-confirm=" Do you want to confirm?"
+
+10) Uploading files :- multiples files
+    <form>
+      <input type="file" name="file" />
+
+      <button
+        hx-post="http://localhost:1330/upload"
+        hx-encoding="multipart/form-data"
+      >
+        File Upload
+      </button>
+    </form>
+  </body>
+11)Handling Race conditions :-
+hx-sync="#FirstButton:drop" //disable the second request(It is pending till the seond request is done) 
+hx-sync="#FirstButton:replace" //first request got cancel and replace it with the second 
+hx-sync="#FirstButton:queue"// it goes into queue
+
+
+<button id="FirstButton" hx-get="http://localhost:1330/" hx-target="#target1">First Request</button>
+
+<button id="SecondButton"  hx-post="http://localhost:1330/messages2" hx-target="#target2" hx-sync="#FirstButton:drop">Next Request</button>
+
+12) Cancelling request:-
+    <button type="button" hx-get="http://localhost:1330/" id="request1">
+      Message Sent
+    </button>
+    <button type="button" onclick="htmx.trigger('#request1','htmx:abort')">
+      Cancel Message Sent
+    </button>
+
+
+Sunday :- 
+
+chapter 3 :-Loading Content :-  30 mins --1.5
+
+1)Targetting Content destination :- 
+
+
+2)Content Swapping 
+3)Use diffrent contant Swap Styles
+4)Out of bound Swaps
+5)Loading a subset of your response
+6)Animating content
+
+
+chapter 4:- Working with Events:- 30 mins --1.5
+1) Hooking into the Page Load Events
+2) Performing Action before and After
+3) HTML Request Events
+4) Handling Request failure with Events 
+5) using Request Interceptors
+6) Logging Page Activity 
+7) All HTMX events
+
+chapter 5 :- Working with Websockets:- 25mins --1
+chapter 6:- HTMX and browser:- 15 mins --1
+
+Sunday:-
+project :- 2 project
+

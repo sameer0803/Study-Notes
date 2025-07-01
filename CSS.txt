@@ -1,0 +1,437 @@
+CSS
+
+Inline ---> line ke andar 
+internal/Embedded ---> style
+External--> link  ke through ---> ek alag file banti hai .css .
+---------------------------------------------------------------------------------------------------
+Selectors
+property
+value
+
+example:-
+h1{
+ color:red;
+ }
+ 
+ h1--> selectors
+ color--> property
+ red--> value
+----------------------------------------------------------------------------------------------------
+Selectors :-
+4 Types 
+
+universal-->*
+element--> h1
+id --> #
+class --> .
+---------------------------------------------------------------------------------------------------
+Property and Value:-
+
+Text Properties:-
+
+text-align --> right,left,center
+text-decoration---> underline,overline.line-through
+font-weight  --->normal,Bold,bolder,lighter,100-900
+font-size--->16px(bydefault)--> 96px --> 1 inch
+
+
+
+font-family ---> arial,Cursive
+line-height-
+text-transform: Uppercase,Lowercase,capitalise;
+----------------------------------------------------------------------------------------------------
+
+Box model in css:-
+
+height:10px;
+Height ----only for content part
+width ----only for content part
+Border ----- 
+			border-width: 3px;
+			border-style: double;
+			border-color: black;
+			
+border shorthand --- 
+border :3px,double,black;
+border-radius:100px;-->50% ---> covert it into circle 
+
+Padding:-
+
+	padding-left:100px;
+    padding-top:100px;
+    padding-bottom:100px;
+    padding-right:100px;
+	padding: 100px 200px 300px 400px;
+	
+	
+Margin:- box khiskaane ke liye.....
+
+margin: 100px 200px 300px 400px;
+
+------------------------------------------------------------------------------------------------------
+
+Display property in CSS:- 
+display: inline
+
+inline ---> takes only that space trquired by the element (no margin /no padding) --> span,button,anchor tag,input
+block --> Takes full space available in width  ---> div ,heading
+inline-block --> takes only that space required by the element but we can set margin and padding 
+none--> To remove element from the block ----> there will be no space
+
+visibility :hidden---> It will acquire that much space
+
+Alpha channel
+
+color ----> opacity decide krta hai --> 
+Rgba --->red green blue alpha  (0 to 1) 
+--------------------------------------------------------------------------------------------------------
+
+Units in CSS 
+
+top:10px;
+absolute and Relative
+
+absolute ---> px ,cm,kilometer,
+Relative ---> percentage, em ,rem
+
+
+ parent to child
+percentage --->{ for all}
+em ---> 
+Font--- example --> 2 em ---> parent se child two times ho jaayega 
+font size of the element itself  within same box.---->width -- em -->
+
+rem :- Root em--- Jo sabse bahar jo element hai na uske ---> uske font size ke hisab se ---> html ke ---> by default --16 px
+
+vh --view port height  ---> relative to 1% of view port(screen Size) height
+vw --view port width   ---> relative to 1% of view port width
+
+-----------------------------------------------------------------------------------------------------
+
+Position:-
+position:-static
+
+Static :- By default every tag is static and here we cant apply property like top,bottom,left ,right 
+Relative :- It is relative to itself in its initialised position .---> we can apply top,bottom,left ,right
+absolute :- It is relative to browser always ---> we can apply top,bottom,left ,right
+fixed :- It get fixed for all time ---> we can apply top,bottom,left ,right
+sticky : It get fixed when in scrolling it comes to top ---> we can apply top,bottom,left ,right
+
+z index --- More the priority more it will be come on each other 
+top
+left
+right
+bottom
+----------------------------------------------------------------------------------------------------------
+CSS Flex :-- flexible box layout
+
+display :flex;
+- Flexible Box Layout:-
+It is one dimensional layout method for arranging items in rows and columns.
+
+
+It tells how flex items are placed in the flex container:-
+
+Very Important:-
+fLEX LAGTA HAI PARENT DIV ME :- 
+or uske andar child div ko arrange krne ko :--
+
+
+Main Axis  from left to right like X axis 
+Cross Axis -- from top to bottom like Y axis 
+flex-direction:-row
+By default X axis default value is row(we give or not) from left to right .
+
+
+after flex we need justify-content property to use ---3 values it has --->
+ flex-start(default) 1,2,3,4,5........>(in beginning)
+ flex end .........1,2,3,4,5 (In end to X axis)
+ center ---> .....1,2,3,4,5...... (In center)
+ 
+ Note :- par ye sab upar se chipke rhange 
+ 
+ ab agar inhe upar ye niche ya canter me move krna hua to ? vertically socho (X axis ka justify se ho gaya ) pr agr y axis ki posietion set krni hai to alogn-items ko bhi use kro to dono direction me control aa jayega
+  uske liye ek or property hai --> align-items 
+ align-items ki teen value-->
+ flex start (upar se chipka rhega) (Vertically)
+ FLEX-END --(Niche se chipak jaayega) (vertically socho)
+ center---bilkul beech me vertically Y axis ki line socho to zero pr aajayega.
+ 
+ 
+ Extra :- 
+ justify-content me -->(horizontally socho)
+1) space-between (to beech me brabar space)--> par end me nahi.
+2)space-around -->(to starting me bhi )
+3)space-evenly--> sare div me brabar 
+ 
+ 
+  align-items me -->(vertically socho)---> par box upar hee chipke rhange parent se --> qki ab hamne use end ya center nahi kiya to by default upar chipke rhenge
+1) space-between (to beech me brabar space)--> par end me nahi.
+2)space-around -->(to starting me bhi )
+3)space-evenly--> sare div me brabar 
+ 
+ 
+ Think about X axis :-
+ flex-direction:-
+1) row(By default) --from left to right (English writing)
+2)row-reverse --from right to leeft (urdu writing)
+ For these justify content will start behaving opposite because direction is changes so starting is right and end is left .
+ 
+3)column --sab dabbe upr se niche aa jaynge(top of each other)
+to yhana ham justify content use nahi krenge 
+ab ham sochenge Y axis ke bare me 
+to socho Y axis me kya sahi rehta hai 
+align-items --yes 
+to ab align items ko center ya end kr do qki by default to start rehta hee hai .
+
+
+other properties :- 
+1)gap :- dabbo ke beech me gap -->control both at the same time.
+isme bhi row-gap ,column-gap 
+
+2)flex-wrap:wrap :- ab chhota bada krenge tab hee waisa hee rhega  
+3)flex-shrink 0:-  ye agr child ke box me laga diya to screen chhoti badi hone par shribnk nahi hoga infact ye overlap lr dega
+flex-shrink:1 (by default) --> to overflow
+It act like switch
+4) flex-grow :- screen bade hone pr dabbe bade ho jaate hain 
+flex-grow:1 :- by default bada hoga screen badi hone par
+flex-grow-screen badi hone pr dabbe waise hee rhenge 
+particular ek dabbe me bhi laga do or miracle dekho 
+flex-grow:5 --> 5 times faster when screen increases
+
+5) max-width :300 px (itna bade tak hee bade honge uske baad reh jaayneg)
+6) min-width:50px --> shrink hone ke time itna hee shrink hionge uske baad nahi hinge. 
+7) align-self:-kisi box ko move karane ke liye particulary ---> center,baselione,flex-start,flex-end,
+pehle dabbe ko last me lana hai to uske child dabbe me align-slef;end likh do end me chala jaayega 
+aise hee center me chala jaayega
+ 
+------------------------------------------------------------------------------------------------------------------
+
+ye child ke boxes me lagta hai 
+
+
+flex-shrink:2   --->(2 times shrink)
+flex-grow: jitni bhi space  bachti hai mainn container me ...sare box lene ke baad----to jahan ye lgega ye uski sari space le leta hai ---
+ flex-grow 2 div me ek sath bhi lagao to ek div 2 se dusra 1 se to ---> 2 times space le lega.
+ align-self:-kisi box ko move karane ke liye particulary ---> center,baselione,flex-start,flex-end,
+pehle dabbe ko last me lana hai to uske child dabbe me align-slef;end likh do end me chala jaayega 
+aise hee center me chala jaayega
+------------------------------------------------------------------------------------------------------------------
+Grid :-
+Shortcut to make 10 boxes in one command line 
+.container>.box#box-{box-$}*10
+
+
+
+
+
+
+
+
+
+
+Media Query :-
+
+It helps to create responsive Website ---->
+@media (max-width:575px)
+{
+body{
+flex-wrap:wrap;
+
+}
+
+
+
+}
+
+
+-----------------------------------------------------------------------------------------------------------------------
+
+Level 5 :- 
+
+Transitions :- from state to another state ---> Normal to active 
+active state---> Jab uspr click krte hain .
+
+
+transition-property
+transition-duration
+transition-timing-function
+transition-delay
+
+Shorthand me aise likhenge 
+transition: all 2s easein 0.2s
+
+-----------------------------------------------------------------------------------------------------------------------
+CSS transform:-
+ 
+trasnsform:-
+
+transform: <below properties>
+1) rotate (45 degree) ---> rotate X ,Y and Z
+2)scale(X,Y) --> ex:- ttransform:scaleX(2) --> two times x axis---> kuch nhi denge to dono me badha hoga...
+3)translate --> move krte hain isse
+4)skew-->corner se pkdkr kheench diya.
+
+Extra:-
+-----------------------------------------------------------------------------------------------------------------------
+
+All about Grid :- 
+
+
+Important-keyword 
+
+parent
+grid-template-columns:120 px,100 px
+grid-template-rows:120 px,100 px
+
+
+Child :-
+grid-row:1/2   
+grid-column:1/2 
+grid-column-start:1 
+grid-column-end:3 
+
+
+
+
+
+Grid lines & grid Cells 
+Grid Track and Grid Area
+
+
+isme lines ko number dedo 
+Parent par:- 
+
+.container{
+display:grid;
+grid-template-columns:120 px,100 px(isme 2 hee grid banengi column wise )
+grid-template-rows:100px 100px 100 px (isme 3 grid bnaengi row wise)
+}
+
+
+grid me automatically numbering aa jayengi.
+
+ab child me :- box me ek exra daal do 
+.item-1{
+grid-row:1/2   ---> 1 se 2 tak jaayega
+grid-column:1/2  ---> 1 se 2 tak jaayega
+}
+
+
+ya ye use kro :- 
+
+.item-1{
+grid-row-start:1   ---> 1 se start hoga
+grid-row-end:2 ----> 2 par end hoga
+grid-column-start:1 --> 1 se start hoga
+grid-column-end:3 --> 3 tak end hoga
+}
+
+
+-------------------------------------------------------------------
+<--------hamare dwara diye hue naam----->
+
+Lines ko naam bhi de sakte hain ... apne man se jo pehle automatically 1,2,3,4 ata tha 
+.container{
+display:grid;
+grid-template-columns:[pehla]120px [dusra]100px [t] (isme 3 grid banengi column wise jiska naam pehhla,dusra ,t hai )
+grid-template-rows:100px 100px 100 px (isme 3 grid bnaengi row wise)
+}
+
+ab iske child me :- 
+.item-4{
+.item-4{
+grid-row:1/2   ---> 1 se 2 tak jaayega
+grid-column:doosra/t  ---> 1 se 2 tak jaayega
+}
+
+
+-------------------------------------------------------------------
+<--------Controlling child div with area---->
+
+Grid ke andar ham area se bhi control kar skte hain 
+
+parent :-
+
+  /* grid-template-areas: "nav nav nav nav"
+                                "side main main main"
+                                "footer footer footer footer";
+								
+.item-1{
+                grid-area: nav;
+                background-color: chartreuse;
+          }   
+ .item-2{
+                grid-area: side;
+                background-color: blue;
+           }   
+ .item-3{
+                grid-area: main;
+                background-color: yellow;
+            
+isme ham area ke andar daal denge 
+jaise item-1 ppure charo box me fail jaayega 
+item-2 sirf side ke andar rhega
+item-3 teen main ke andar rhega
+
+----------------------------------------------------------------
+Ab tak hamne parent ke partuclar section me child ke div ko daalna seekha 
+ab ham uske upar or command chahte hain .
+child ke dabbo me gap 
+
+Extra :- 
+
+parent par laga do 
+gap :100 px
+
+row-gap
+column-gap
+
+
+Ab ham dabbe ko grid ke ek section me daalna to seekh gye lekin ab hame use upar niche krna aana chahioye 
+
+vertically ke liye 
+align-items 
+
+horizontally ke liye 
+justify-item 
+
+
+Example :- Parent par lgega
+justify-items: center;
+align-items: center;
+			
+			ab kisi dabbe ko alag se upr niche krna ho to 
+			
+			align-self: self-start;---> vertically
+                justify-self: self-end; --> horizontally
+				
+				
+----------------------------------------------------------------------------
+ab dabbe ko upar niche krna seekh gye 
+lekin ab parent ke andar grid chhoti hai to ?
+usko bhi align kr skte hain 
+
+justify-content: end;
+align-content:end
+
+iska ek shortcut bhi hai ..
+place-content:center ---> ek sath upar niche ho jata hai 
+place-content: left;
+place-content: start;
+----------------------------------------------------------------------------
+
+rf 
+grid-template-columns:1rf 1rf,1rf (3 parts me divide kr dega )
+grid-template-rows:1rf 1rf,1rf (3 parts me divide kr dega )
+
+----------------------------------------------------------------------------
+
+Repeat Code ho rha hai 
+
+grid-template-columns:repeat(4,1rf)
+grid-template-columns:repeat(4,minmax(40px,1rf)
+
+----------------------------------------------------------------------------
+
+
